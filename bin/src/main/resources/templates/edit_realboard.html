@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 수정</title>
+    <link rel="stylesheet" href="/css/board.css"> <!-- CSS 적용 -->
+</head>
+<body>
+
+<header>
+    <h2>게시글 수정</h2>
+</header>
+
+<main>
+    <form action="/realboard/update" method="post">
+        <input type="hidden" name="id" th:value="${post.id}" />
+        <textarea name="content" rows="4" cols="50" th:text="${post.content}"></textarea>
+        <br>
+        <button type="submit">수정 완료</button>
+        <a href="/realboard" class="cancel-button">취소</a>
+    </form>
+</main>
+
+<footer>
+    Made by 윤지 😊
+</footer>
+
+</body>
+</html>

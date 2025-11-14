@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title th:text=${title}>게시판</title>
+	<link rel="stylesheet" href="/css/board.css">
+</head>
+<body>
+
+<header>
+	<h2>게시판</h2>
+</header>
+
+<main>
+	
+	<!-- 게시글 작성 -->
+	<form action="/board/write" method="post">
+		<textarea name="content" rows="4" cols="50" placeholder="게시글을 작성하세요"></textarea>
+		<br>
+		<button type="submit">등록</button>
+	</form>
+	
+	<!-- 게시글 목록 -->
+	<ul>
+		<li th:each="post : ${posts}" th:text="${post}"></li>
+	</ul>
+	
+</main>
+
+<footer>
+    Made by 윤지 😊
+</footer>
+
+</body>
+</html>

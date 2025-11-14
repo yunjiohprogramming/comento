@@ -1,0 +1,146 @@
+/* board.css */
+
+/* 전체 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* 헤더 */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+header h2 {
+    margin: 0;
+}
+
+/* 메인 영역 */
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* 게시글 작성 폼 */
+form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+/* 버튼 그룹 (등록 / 수정 완료, 취소 버튼) */
+.button-group {
+    display: flex;
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    gap: 10px; /* 버튼 사이 간격 */
+    margin-top: 10px;
+}
+
+/* 등록 / 수정 완료 버튼 */
+button.register-button,
+button.update-button {
+    padding: 8px 20px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.register-button:hover,
+button.update-button:hover {
+    background-color: #45a049;
+}
+
+/* 게시글 목록 */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px; /* 등록 폼과 게시글 목록 간 간격 */
+}
+
+ul li {
+    background-color: white;
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 게시글 내용 */
+ul li span {
+    word-break: break-word;
+    flex-grow: 1;
+}
+
+/* 삭제/수정 버튼 */
+.delete-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    text-decoration: none;
+    color: white;
+    background-color: #f44336; /* 삭제 버튼 빨강 */
+    border-radius: 5px;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+.edit-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    text-decoration: none;
+    color: white;
+    background-color: #2196F3; /* 수정 버튼 파랑 */
+    border-radius: 5px;
+}
+
+.edit-button:hover {
+    background-color: #1976d2;
+}
+
+/* edit_realboard.html 취소 버튼 */
+a.cancel-button {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #777;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a.cancel-button:hover {
+    background-color: #555;
+}
+
+/* clearfix for form to prevent overlap */
+form::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #f1f1f1;
+    margin-top: 30px;
+}
